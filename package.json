@@ -1,0 +1,28 @@
+{
+  "name": "env-app-ensitech",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "prod": "webpack",
+    "doc": "jsdoc -r -d docs src",
+    "lint": "eslint src --fix"
+  },
+  "author": "Sylvain Saravanane",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.4",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
