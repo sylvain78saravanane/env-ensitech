@@ -1,14 +1,18 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
+import { defineConfig } from 'eslint-define-config'; // Importez la fonction defineConfig
+import airbnb from 'eslint-config-airbnb-base';
+import pluginReact from 'eslint-plugin-react';
+import pluginImport from 'eslint-plugin-import';
 
-
-
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  {files: ["**/*.{js,mjs,cjs,jsx}"]},
-  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  pluginReact.configs.flat.recommended,
-];
+export default defineConfig({
+  extends: [
+    airbnb,
+    pluginReact.configs.recommended,
+    pluginImport.configs.recommended,
+  ],
+  rules: {
+    'no-console': 'off',
+    'indent': ['error', 2],
+    'quotes': ['error', 'double'],
+    'linebreak-style': ['error', 'unix'],
+  },
+});
